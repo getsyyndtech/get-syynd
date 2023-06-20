@@ -7,7 +7,7 @@ const PhoneInputComponentUI = () => {
   return (
     <>
       <PhoneInput
-        placeholder="(+) phone number"
+        placeholder="(+ 1) phone number"
         className='p-2 ring-1 w-full focus:bg-white bg-gray-100 duration-300 ring-gray-300'
         value={phoneValue}
         onChange={setPhoneValue}
