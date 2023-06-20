@@ -1,6 +1,7 @@
 import React from 'react'
 import sectionClosure from '../../../assets/images/section_bottom_shape.png'
 import InputUI from '../../../components/inputsUI'
+import PhoneInputComponentUI from '../../../components/phoneInputUI'
 
 const HeroUIComponent = () => {
   return (
@@ -27,6 +28,7 @@ const HeroUIComponent = () => {
                   inputType={'emial'}
                   placeholderValue={'Email address'}
                 />
+                <PhoneInputComponentUI />
                 <InputUI 
                   inputType={'Password'}
                   placeholderValue={'Password'}
