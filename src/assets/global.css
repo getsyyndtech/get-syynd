@@ -1,14 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
   margin: 0%;
   padding: 0%;
   overflow-x: hidden;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: 300 !important;
 }
 
 input {
@@ -21,12 +22,74 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif !important;
+  font-family: 'Merriweather', serif !important;
 }
 
-.hero_sub_img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.655), rgba(0, 0, 0, 0.655)), url('./images/hero_bg_image.jpg');
+.hero_container {
+  background-image: linear-gradient(rgba(18, 86, 212, 0.774), rgba(0, 0, 0 , 0.842)), url('./images/hero_bg_image.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 120vh;
+}
+
+.hero_container h1 {
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+.hero_container .lg_header_text {
+  font-size: 6rem;
+  font-weight: 900 !important;
+  position: relative;
+  font-family: 'Rubik', sans-serif !important;
+  letter-spacing: 3.5px;
+  color: transparent;
+}
+
+.hero_container .lg_header_text::after {
+  content: 'Get Syynd';
+  font-size: 6rem;
+  font-weight: 900 !important;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  letter-spacing: 3.5px;
+  /* color: transparent; */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.hero_container .lg_header_text::before {
+  content: 'Get Syynd';
+  font-size: 6rem;
+  font-weight: 900 !important;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  letter-spacing: 3.5px;
+  color: #ffffff;
+  animation: wave 4s ease-in-out infinite !important;
+}
+
+@keyframes wave {
+  0%, 100% {
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero_container h1 {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero_container h1 {
+    font-size: 2.4rem;
+  }
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const InputUI = ({ inputType, autoCompleteValue }) => {
+const InputUI = ({ inputType, autoCompleteValue, placeholderValue }) => {
   return (
     <>
-      <input className='p-1.5 ring-1 w-full focus:ring-2 focus:ring-indigo-500 ring-gray-300 rounded-md' required type={inputType} autoComplete={autoCompleteValue} />
+      <input className='p-2 ring-1 w-full focus:bg-white bg-gray-100 duration-300 ring-gray-300' placeholder={placeholderValue} required type={inputType} autoComplete={autoCompleteValue} />
     </>
   )
 }

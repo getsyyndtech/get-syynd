@@ -1,34 +1,49 @@
 import React from 'react'
-import ButtonUICompoennt from '../../../components/buttonUI'
+import sectionClosure from '../../../assets/images/section_bottom_shape.png'
+import InputUI from '../../../components/inputsUI'
 
 const HeroUIComponent = () => {
   return (
-    <section className='h-screen w-full'>
+    <section className='w-full hero_container relative'>
       <main className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
-        <div className='sm:flex sm:flex-row gap-3 h-screen'>
-          <div className='basis-1/2 w-full h-full flex flex-col justify-center'>
-            <h1 className='text-indigo-500 xl:text-6xl text-3xl lg:text-5xl md:text-4xl font-bold'>
-              Every tool you need as a Creative talent or Investor.
-            </h1>
-            <p className='mt-5 text-gray-400 text-sm'>
-              Got Creative Talent? Bring it on. Join the Get Syynd <br /> Creative Talent Community of Talents, Fans and Investors <br /> (music, athletes, actors, models, artist, dancer).
+        <div className='md:flex md:flex-row h-screen'>
+          <div className='md:basis-1/2 h-full w-full flex flex-col justify-center'>
+            <h1 className='lg_header_text'>Get Syynd</h1>
+            <h1 className='text-white'>Everything you need as an independent creative talent, a fan or investor.</h1>
+            <p className='mt-5 text-white text-base'>
+
             </p>
-            <div className='mt-5 flex gap-2'>
-              <ButtonUICompoennt
-                text={'Sign Up'}
-                largeButton={true}
-              />
-              <ButtonUICompoennt
-                text={'Learn More'}
-                largeButton={true}
-              />
-            </div>
           </div>
-          <div className='basis-1/2 h-full w-full sm:flex sm:justify-center sm:items-center'>
-            <div className='rounded-lg shadow-lg xl:h-5/6 lg:h-3/5 md:h-3/5 w-4/5 hero_sub_img'></div>
+          <div className='md:basis-1/2 h-full w-full flex items-center justify-center'>
+            <div className='py-14 px-12 bg-white shadow w-3/4'>
+              <h1 className='text-center text-3xl font-bold'>Register now</h1>
+
+              <form className='mt-10 space-y-5' action='#' method='POST'>
+                <InputUI 
+                  inputType={'text'}
+                  placeholderValue={'Full name'}
+                />
+                <InputUI 
+                  inputType={'emial'}
+                  placeholderValue={'Email address'}
+                />
+                <InputUI 
+                  inputType={'Password'}
+                  placeholderValue={'Password'}
+                />
+                <InputUI 
+                  inputType={'Password'}
+                  placeholderValue={'Confirm password'}
+                />
+                <button className='p-2 bg-indigo-500 w-full text-white text-lg'>Create account</button>
+              </form>
+            </div>
           </div>
         </div>
       </main>
+      <div className='absolute bottom-0 left-0 right-0 w-full'>
+        <img src={ sectionClosure } width={'100%'} alt='brush effect png' />
+      </div>
     </section>
   )
 }
